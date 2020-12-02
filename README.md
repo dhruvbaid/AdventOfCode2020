@@ -1,2 +1,4 @@
 # AdventOfCode2020
-Code used for Advent of Code event (2020)
+My solutions for the Advent of Code event (2020)
+
+I am on the UChicago Leaderboard!
