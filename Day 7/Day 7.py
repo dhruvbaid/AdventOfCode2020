@@ -7,11 +7,13 @@ def part1():
     for i in range(len(lines)):
         lines[i] = lines[i].split("\n")[0]
 
-    bagRules = []
-
+    # separate container from containees
     for i in range(len(lines)):
         lines[i] = lines[i].split(" bags contain ")
 
+    bagRules = []
+
+    # rule processing
     for i in range(len(lines)):
         if("," in lines[i][1]):
             # multiple bags
@@ -81,11 +83,13 @@ def part2():
     for i in range(len(lines)):
         lines[i] = lines[i].split("\n")[0]
 
-    bagRules = []
-
+    # separate container from containees
     for i in range(len(lines)):
         lines[i] = lines[i].split(" bags contain ")
 
+    bagRules = []
+
+    # rule processing
     for i in range(len(lines)):
         if("," in lines[i][1]):
             # multiple bags
