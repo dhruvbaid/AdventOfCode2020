@@ -8,17 +8,7 @@ def main():
         lines[i] = int(lines[i].split("\n")[0])
 
     i = 0
-    arr = [0]
-    while(True):
-        poss = [i+1, i+2, i+3]
-        for x in poss:
-            if x in lines:
-                arr.append(x)
-                lines.remove(x)
-                i = x
-        if len(lines) == 0:
-            break
-    arr.append(max(arr) + 3)
+    arr = [0] + sorted(lines) + [max(lines) + 3]
 
     diff3 = 0
     diff1 = 0
