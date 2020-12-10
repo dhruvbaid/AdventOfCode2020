@@ -1,5 +1,6 @@
 # main : runs code for Day 10.
 def main():
+    # part 1
     with open("Day 10 Input.txt", mode = 'r') as f:
         lines = f.readlines()
 
@@ -8,17 +9,20 @@ def main():
         lines[i] = int(lines[i].split("\n")[0])
 
     i = 0
+
+    # for part 1, we need to use ALL the adapters, and we also want them to be
+    # in increasing order, so we can just sort them
     arr = [0] + sorted(lines) + [max(lines) + 3]
 
     diff3 = 0
     diff1 = 0
 
     # arr2 stores this list of integers, but with dividors "D" at the points
-    # where we know that there can be no swaps (i.e. where the difference
-    # between the intgers to the left and right is 3). This divides our list
-    # into a disjoint union of sets which have invariant start and end integers
-    # which we can then loop through much more efficiently, find the number of
-    # valid permutations of each disjoint set, multiply, and return the answer
+    # where we know that there can be no swaps in part 2 (i.e. where the
+    # difference between the intgers to the left and right is 3). This divides
+    # our list into a disjoint union of sets which have invariant start and end
+    # integers which we can then loop through much more efficiently, find the
+    # number of valid permutations of each, multiply, and return the answer
     arr2 = []
 
     for i in range(len(arr) - 1):
@@ -31,10 +35,11 @@ def main():
             diff3 += 1
             arr2.append(cur)
             arr2.append("D")
+    arr2.append(arr[-1])
+
     print(f"Part 1: {diff1 * diff3}")
 
     # part 2
-    arr2.append(arr[-1])
     count = 1
     start = 0
     stop = 0
