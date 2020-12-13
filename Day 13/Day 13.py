@@ -53,7 +53,6 @@ def part2():
             timesC.append(int(times[i]))
             d[int(times[i])] = i
 
-
     # we will start with the maximum variable, because that will minimize the
     # number of computations
     maxVar = max(timesC)
