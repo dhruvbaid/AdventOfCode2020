@@ -1,3 +1,8 @@
+"""
+SOLUTIONS NOT MY OWN
+SOURCE: https://github.com/borjasotomayor/AoC/blob/main/2020/day19.py
+"""
+
 import lark
 
 # aoc2lark : Converts the given grammar to a Lark grammar
